@@ -1,4 +1,4 @@
-#Cursor installer  
+# Cursor installer  
 _The cursor theme is not mine, this is simply an installer for a favorite of mine. This is for
 quick boot-strapping purposes_  
 

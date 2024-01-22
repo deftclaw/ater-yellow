@@ -1,6 +1,21 @@
 #!/bin/bash
-
+# Guard clause, exit if sudo is inaccessible
 [[ $(sudo echo 1) ]] || exit 1
 
-sudo cp -r ATER-yellow /usr/share/icons/
-cp -r .icons $HOME/
+# List of installable themes
+themes=( 'ATER-yellow' 'Empty-Butterfly-Yellow-vr2' )
+
+printf "Cursor Themes:\n"  1) ATER-yellow\n  2) Empty-Butterfly-Yellow-vr2\n"
+idx=0
+while [ $idx -lt ${#themes[@]} ]
+do
+  printf "  $(($idx + 1))\) ${themes[$idx]}\n"
+done
+
+read -p 'Select by number: ' IDX
+sidx=$(($IDX - 1))
+selected=${themes[$sidx]}
+
+sudo cp -r "${selected}" /usr/share/icons/
+mkdir -p "$HOME/.icons/default" 
+cp -r ".icons/default/${selected}.theme" $HOME/

@@ -12,3 +12,5 @@ quick boot-strapping purposes_
 
 3. Run the installer:( installing cursors for everyone requires sudo! )  
   - `./install`  
+  _Answer the prompt by selecting (1,2) for ATER or Empty-Butterfly, high-visibility cursor_  
+  - `2 <Enter>`  
